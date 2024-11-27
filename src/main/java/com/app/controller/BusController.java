@@ -35,8 +35,9 @@ public class BusController {
 	
 	@GetMapping("/find/{busId}")
     public ResponseEntity<Bus> getBusById(@PathVariable int busId)throws BusException{
-		
-		return new ResponseEntity<Bus>(bService.viewBus(busId),HttpStatus.OK); 
+		Bus viewBus = bService.viewBus(busId);
+		return new ResponseEntity<Bus>(viewBus ,HttpStatus.OK);
+		//simplified and added the variable for it
     }
 		
 	
