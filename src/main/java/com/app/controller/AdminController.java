@@ -30,7 +30,7 @@ public class AdminController {
 		//Directed from master branch!
 
 		 return new ResponseEntity<>(adm,HttpStatus.OK);
-		//there is no need to add some more features for it !
+
 	}
 
 }
