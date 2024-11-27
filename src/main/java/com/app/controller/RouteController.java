@@ -60,7 +60,7 @@ public class RouteController {
 	
 	@DeleteMapping("/delet/{routeId}/{key}")
     public ResponseEntity<Route> deleteRouteById(@PathVariable int routeId,@PathVariable("key") String key)throws RouteException, LoginException {
-		
+        System.out.println("deleting route");
 		return new ResponseEntity<Route>(rService.deleteRoute(routeId,key),HttpStatus.OK);
     }
 
