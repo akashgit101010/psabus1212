@@ -28,8 +28,9 @@ public class BusController {
 		
 	@PostMapping("/save/{key}")
     public ResponseEntity<Bus> createBus(@Valid @RequestBody Bus bus,@PathVariable("key") String key)throws BusException, LoginException {
-		
-        return new ResponseEntity<Bus>(bService.addBus(bus,key),HttpStatus.OK);
+		Bus bus1 = bService.addBus(bus, key);
+		return new ResponseEntity<Bus>(bus1,HttpStatus.OK);
+		//Simplified code
     } 
 	
 	@GetMapping("/find/{busId}")
