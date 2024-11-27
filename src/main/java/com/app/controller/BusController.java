@@ -65,7 +65,7 @@ public class BusController {
 	public ResponseEntity<List<Bus>> getAllBuses() throws BusException{
 		
 		List<Bus> listOfBuses=bService.viewAllBuses();
-		
+		System.out.println("get all & to be merged");
 		return new ResponseEntity<List<Bus>>(listOfBuses,HttpStatus.OK);
 	}
 
