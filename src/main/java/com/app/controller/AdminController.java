@@ -26,7 +26,8 @@ public class AdminController {
 	public ResponseEntity<Admin> registerAdmin(@Valid @RequestBody Admin admin) throws AdminException
 	{
 		 Admin adm = asi.addAdmin(admin);
-		 
+		 //add some features here to improve the performance!
+		//Directed from maseter branch!
 		 return new ResponseEntity<Admin>(adm,HttpStatus.OK);
 		
 	}
