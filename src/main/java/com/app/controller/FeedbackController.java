@@ -28,7 +28,7 @@ public class FeedbackController {
 	private FeedBackService fService;
 	@GetMapping("/viewAll")
     public ResponseEntity<List <Feedback>> getAllFeedback()throws feedbackException {
-		
+        System.out.println("feedBack");
         return new ResponseEntity<List <Feedback>>(fService.viewAllFeedBack(),HttpStatus.OK);
     }
 	
