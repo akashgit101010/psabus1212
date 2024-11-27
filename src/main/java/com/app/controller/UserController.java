@@ -38,7 +38,7 @@ public class UserController {
 	public ResponseEntity<User> updateUser(@Valid @RequestBody User user,@PathVariable("key") String key) throws UserException
 	{
 		User us = usi.updateUser(user, key);
-		
+		System.out.println("hello");
 		return new ResponseEntity<User>(us,HttpStatus.OK);
 	}
 	
