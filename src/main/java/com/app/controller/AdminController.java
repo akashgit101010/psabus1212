@@ -27,9 +27,10 @@ public class AdminController {
 	{
 		 Admin adm = asi.addAdmin(admin);
 		 //add some features here to improve the performance!
-		//Directed from maseter branch!
-		 return new ResponseEntity<Admin>(adm,HttpStatus.OK);
-		
+		//Directed from master branch!
+
+		 return new ResponseEntity<>(adm,HttpStatus.OK);
+		//there is no need to add some more features for it !
 	}
 
 }
