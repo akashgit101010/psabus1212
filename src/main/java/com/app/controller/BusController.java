@@ -42,8 +42,9 @@ public class BusController {
 	
 	@PutMapping("/update/{key}")
     public ResponseEntity<Bus> updateBusById(@Valid @RequestBody Bus bus,@PathVariable("key") String key)throws BusException, LoginException {
-		
-		return new ResponseEntity<Bus>(bService.updateBus(bus,key),HttpStatus.OK);
+		Bus updated = bService.updateBus(bus, key);
+		return new ResponseEntity<Bus>(updated ,HttpStatus.OK);
+		//addded the simplified code for update
     }
 	
 	@DeleteMapping("/delet/{busId}/{key}")
